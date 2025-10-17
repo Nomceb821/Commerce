@@ -1,0 +1,67 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: sans-serif;
+}
+.logo h1{
+    padding-left:45px;
+    margin-top: 10px;
+}
+
+.logo img{
+    border-radius: 20px;
+    transform: translateY(-140%);
+    margin: 10px;
+}
+.logo p{
+    transform: translateY(-410%);
+    position: absolute;
+    right: 25px;
+}
+
+.search {
+    position: relative;
+    width: 100%;
+    bottom: 40px;
+   
+}
+
+.search input[type="text"] {
+    width: 94%;
+    padding: 8px 30px 8px 30px; /* right padding for icon */
+    margin-left: 10px;
+    border-radius: 20px;
+}
+
+.search i.fa-search {
+    position: absolute;
+    left: 20px;
+    top: 50%;        /* It controls whether the icon is inside or not */
+    transform: translateY(-50%);      /*position of the icon inside the search*/
+    color: #888;
+    pointer-events: none; /* icon won't interfere with typing */
+}
+.categories{
+    margin: 10px;
+    transform: translateY(-90%);
+    display: flex;
+    gap: 40px;
+
+}
+
+.categories button{
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    color: #bab7b7;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.categories button.active{
+    color:#ffffff;
+    background-color:black;
+    border-radius: 20px;
+}
