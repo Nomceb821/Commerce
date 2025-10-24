@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Cart - Xopper</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <h1>Xopper</h1>
+      <img src="clouds2.jpg" alt="Hyacinth" width="30" height="30">
+      <p id='cart'><i class="fa fa-shopping-cart"></i></p>
+    </div>
+
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <h3>Total: <span id="total">R0</span></h3>
+  </div>
+
+  <script>
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartItemsDiv = document.getElementById("cart-items");
+    const totalEl = document.getElementById("total");
+
+    let total = 0;
+
+    if (cart.length === 0) {
+      cartItemsDiv.innerHTML = "<p>Your cart is empty.</p>";
+    } else {
+      cart.forEach(item => {
+        total += item.price;
+        const div = document.createElement("div");
+        div.innerHTML = `
+          <img src="${item.image}" width="50" height="50">
+          <strong>${item.name}</strong> - R${item.price}
+        `;
+        cartItemsDiv.appendChild(div);
+      });
+      totalEl.textContent = "R" + total;
+    }
+  </script>
+</body>
+</html>

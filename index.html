@@ -1,23 +1,51 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <title>E_commerce</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
     <body>
         <div class = 'container'>
-            <div class="logo">
-                <h1>Xopper</h1>
-                <img src="clouds2.jpg" alt="Hyacinth" width="30" height="30">
-                <p id='cart'><i class="fa fa-shopping-cart"></i></p>
+            <header class="header">
+                <button class="mobile-menu-btn" onclick="openSidebar()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="brand">Xopper</div>
+                <div class="all">
+                    <div class="search">
+                        <input type="text" placeholder="Search products, brands..." name="search">
+                        <i class="fa fa-search"></i>
+                    </div>
+                    <div class="other">
+                        <p id='cart'><i class="fa fa-shopping-cart"></i></p>
+                        <p><i class="fa-solid fa-location-dot"></i></p>
+                        <p><i class="fa-solid fa-user"></i></p>
+                    </div>
+                </div>
+            </header>
+            <!-- Sidebar / Overlay Menu -->
+            <div class="sidebar" id="sidebar">
+                <button class="close-btn" onclick="closeSidebar()">&times;</button>
+                <h2>bash</h2>
+                <div class="menu-grid">
+                    <div class="menu-item women">Women</div>
+                    <div class="menu-item men">Men</div>
+                    <div class="menu-item sports">Sports</div>
+                    <div class="menu-item home">Home</div>
+                    <div class="menu-item kids">Kids</div>
+                    <div class="menu-item beauty">Beauty</div>
+                    <div class="menu-item jewellery">Jewellery</div>
+                    <div class="menu-item tech">Tech</div>
+                    <div class="menu-item sale">Sale</div>
+                    <div class="menu-item deals">Deals</div>
+                </div>
             </div>
-            <div class="search">
-                <input type="text" placeholder="Search products, brands..." name="search">
-                <i class="fa fa-search"></i>
-            </div>
+
             <div class="categories">
-                <button class="active">Brands</button>
+                <button class="active">All</button>
+                <button onclick="location.href='Brands.html'">Brands</button>
                 <button onclick="location.href='Women.html'">Women</button>
                 <button onclick="location.href='Kids.html'">Kids</button>
                 <button onclick="location.href='Men.html'">Men</button>
@@ -30,6 +58,5 @@
                 <button onclick="location.href='Deals.html'">Deals</button>
             </div>
         </div>
-        <script src="javascript.js"></script>
     </body>
 </html>

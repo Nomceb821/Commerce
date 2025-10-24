@@ -1,0 +1,171 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center; /* vertically align everything */
+  justify-content: space-between; /* space out left-center-right */
+  padding: 15px 30px;
+  color: white;
+  background-color: black;
+  font-size: 28px;
+}
+
+.mobile-menu-btn {
+  background-color: black;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: orange;
+  margin-left: 10px;
+}
+
+.all {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* smaller, more natural spacing */
+  flex: 1;
+  justify-content: center; /* centers search bar */
+}
+
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search input[type="text"] {
+  width: 600px;
+  height: 35px;
+  padding: 8px 35px 8px 15px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+}
+
+.search i.fa-search {
+  position: absolute;
+  right: 12px;
+  color: #888;
+  pointer-events: none;
+}
+
+.other {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+}
+
+.other p {
+  margin: 0;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.categories{
+    padding: 10px;
+}
+.categories button{
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    color: #bab7b7;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.categories button.active{
+    color:#ffffff;
+    background-color:black;
+    border-radius: 30px;
+}
+
+/* Sidebar overlay */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.sidebar h2 {
+  margin: 10px 0 20px;
+  font-size: 24px;
+}
+
+/* Grid for category tiles */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 120px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* Women section */
+.clothes{
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-left: 15px;
+}
+.clothes button{
+  background: #4f65d1;
+  color: #ffffff;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.clothes button:hover{
+  background: #45a049;
+}

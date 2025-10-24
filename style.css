@@ -65,3 +65,24 @@ body{
     background-color:black;
     border-radius: 20px;
 }
+
+
+
+/* Women section */
+.clothes{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-left: 15px;
+}
+.clothes button{
+    background: #4f65d1;
+    color: #ffffff;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.clothes button:hover{
+    background: #45a049;
+}
